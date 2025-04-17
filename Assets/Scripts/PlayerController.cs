@@ -3,9 +3,9 @@ using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Camera playerCamera;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,10 +25,5 @@ public class PlayerController : MonoBehaviour
                 agent.SetDestination(hit.point);
             }
         }
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Destroy(gameObject);
     }
 }
